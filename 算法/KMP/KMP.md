@@ -57,6 +57,7 @@ signed main(void) {
 		if (j == n) {
 			//匹配成功
 			cout << i - n<<' ';
+			//若匹配成功，接着求。
 			j = ne[j];
 		}
 	}

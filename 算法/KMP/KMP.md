@@ -30,7 +30,7 @@
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-#define int long long
+#define int long long  
 const int N = 1e6;
 int n, m;
 char p[N], s[N];
@@ -48,7 +48,7 @@ signed main(void) {
 		if (p[i] == p[j + 1])j++;
 		ne[i] = j;
 	}
-	//和s[i] 匹配的永远是 p[j+1] 方便实现
+	//和s[i] 匹配的永远是 p[j+1] 方便实现当匹配失败时，j就是最后一个匹配成功的元素，此时next直接写成next[j]即可。
 	for (int i = 1, j = 0; i <= m; i++) {
 		//当j为0的时候，退无可退。
 		while (j && s[i] != p[j + 1])j = ne[j];

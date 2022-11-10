@@ -50,7 +50,7 @@ signed main(void) {
 	}
 	//和s[i] 匹配的永远是 p[j+1] 方便实现
 	for (int i = 1, j = 0; i <= m; i++) {
-		//j还没有退出起点
+		//当j为0的时候，退无可退。
 		while (j && s[i] != p[j + 1])j = ne[j];
 		//如果匹配，则继续下一位
 		if (s[i] == p[j + 1])j++;

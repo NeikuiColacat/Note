@@ -1,6 +1,7 @@
 # n皇后问题
 [原题](https://www.acwing.com/problem/content/845/)
-![图 3](../../images/78b01b6ef8b91ec22788c3f476f11436033b3ba1aa2d02a0c4ecb192ce93be0b.png)  
+
+![图 3](../../../images/78b01b6ef8b91ec22788c3f476f11436033b3ba1aa2d02a0c4ecb192ce93be0b.png)  
 
 
 ```cpp

@@ -1,3 +1,4 @@
+# n皇后问题
 ```cpp
 #include <iostream>
 using namespace std;
@@ -9,16 +10,16 @@ void dfs(int D) {
 	if (D == n) {
 		for (int i = 0; i < n; i++) {
 			puts(ans[i]);
-			puts("");
 		}
+		puts("");
 		return;
 	}
 	for (int i = 0; i < n; i++) {
-		if (!col[i] && !dg[i] && !udg[i]) {
+		if (!col[i] && !dg[D+i] && !udg[D-i+n]) {
 			ans[D][i] = 'Q';
 			col[i] = dg[D+i] = udg[D-i+n] = 1;
 			dfs(D + 1);
-			col[i] = dg[i] = udg[i] = false;
+			col[i] = dg[D+i] = udg[D-i+n] = false;
 			ans[D][i] = '.';
 		}
 	}

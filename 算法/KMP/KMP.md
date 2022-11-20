@@ -27,6 +27,9 @@
 ![图 2](../../images/fcedef47ee6f254d0fca1252313bad0b8a1e1f0cd4e77eebe0e02e89c79d6438.png)  
 
 - next数组下标含义是，在下标之前（包含下标）这个范围取前后缀,我只需要保证这个范围内我的前缀等于后缀就可以
+  
+![图 1](/images/06b8eb2ba2a2b507162f01f64a2c1fe5462fb7948fc3590ad2fc64653eea52fa.png)  
+
 ---
 ```cpp
 #include <bits/stdc++.h>

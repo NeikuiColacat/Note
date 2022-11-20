@@ -1,4 +1,4 @@
-# KMP  $O(m+n)$
+# KMP  $O(m+n)$  计算next最坏为2m ， 匹配最坏为2n，忽略系数
 [原题](https://www.acwing.com/problem/content/833/)
 ![图 5](../../images/a7d66bc08c046853f09dda15b51f63911dce3ab6ffffb6b10c308001c264d80d.png)  
 

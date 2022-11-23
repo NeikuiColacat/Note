@@ -9,7 +9,7 @@ Bool cmp(struct a,struct b){
 }
 signed main(){
     sort(a,a+n,cmp);
-    sort(a,a+n,greater<int>);//降序
-    sort(a,a+n,less<int>);//升序
+    sort(a,a+n,greater<int>());//降序
+    sort(a,a+n,less<int>());//升序
 }
 ```

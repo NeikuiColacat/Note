@@ -54,3 +54,27 @@ $a_1 \wedge a_2 \wedge a_i...\wedge a_n=x$
 则后手会拿到全0结果
 
 
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int n;
+void solve() {
+	//任何数字与0异或结果都等于这个数字它本身
+    int res = 0;
+	while (n--) {
+		int x;
+		cin >> x;
+		res ^= x;
+	}
+	if (res)cout << "YES\n";
+	else cout << "NO\n";
+}
+int main() {
+	cin >> n;
+	solve();
+}
+
+```
+
+

@@ -61,3 +61,41 @@ int main() {
 }
 
 ```
+## 拆分NIM
+![图 3](/images/af9cae62cee98ae74e17bb292f7e775bba937cf5934f6ca0729c6f0b2e65f83c.png)  
+[click](https://www.acwing.com/problem/content/896/)
+
+把一个堆拆分为两个，那么这个堆的SG值就等于拆分为两个的堆的SG异或值
+```cpp
+#include <iostream>
+#include <unordered_set>
+#include <cstring>
+using namespace std;
+const int N = 110;
+int s[N];
+int sg(int x) {
+	if (s[x] != -1)return s[x];
+	unordered_set<int> S;
+	for (int i = 0; i < x; i++) {
+		for (int j = 0; j <= i; j++) {
+			S.insert(sg(i) ^ sg(j));
+		}
+	}
+	for (int i = 0;; i++)
+		if (!S.count(i))return s[x] = i;
+}
+signed main() {
+	int n;
+	cin >> n;
+	int res = 0;
+	memset(s, -1, sizeof(s));
+	while (n--) {
+		int q;
+		cin >> q;
+		res ^= sg(q);
+	}
+	if (res)cout << "Yes";
+	else cout << "No";
+}
+
+```

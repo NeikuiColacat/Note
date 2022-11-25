@@ -23,5 +23,34 @@ $a_1 \wedge a_2 \wedge a_{i1}...\wedge a_n = 0$
 ## 2. 如果初始状态$a_1 \wedge a_2 \wedge a_3...\wedge a_n != 0$
 #### 那么一定存在一种取法，使最终异或的结果为0
 ### 证：
-假设最后异或结果为x
-那么存在非0$a_i$ , 
+假设最后异或结果为x且$x!=0$ x的最高位为第k位
+
+那么存在非0$a_i$ , $a_i$的第k位为1
+
+则$a_i \wedge x<a_i$
+
+那么我们可以从$a_i$中拿出$a_i-a_i\wedge x$个石头
+
+那么$a_i$就变成$a_i-(a_i-a_i\wedge x)$
+
+$a_1 \wedge a_2 \wedge a_i...\wedge a_n$
+
+变成
+
+$a_1 \wedge a_2 \wedge (a_i\wedge x)...\wedge a_n$
+
+又有
+
+$a_1 \wedge a_2 \wedge a_i...\wedge a_n=x$
+
+则最终结果为x^x=0
+---
+那么先手拿到的结果总是为异或不为0，先手总是将其变为异或为0
+
+后手拿到的结果总是异或为0
+
+而$FinalStanding$则为全0，全0异或为0
+
+则后手会拿到全0结果
+
+

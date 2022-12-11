@@ -26,7 +26,7 @@ int prim() {
 			if (!st[j]&&(t == -1 || d[j] < d[t]))t = j;
 		}
 		if (i && d[t] == INF)return INF;
-        //存在负的自环的时候，要先加res，再用该节点更新
+        //存在自环的时候，要先加res，再用该节点更新
 		if (i)res += d[t];
 		for (int j = 1; j <= n; j++) {
 			d[j] = min(d[j], g[t][j]);

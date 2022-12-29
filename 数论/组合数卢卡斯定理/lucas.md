@@ -4,8 +4,8 @@
 ## 证明：
 ![图 1](/images/c4a3c1c35a8f7d6516412bdbd64148ab64f9f3b26dc8d223c002f48954bc8595.png)  
 
-
-#### 特有： 当a与b按p进制展开的时候若有bi>ai,则$C_a^b=0w$
+#### 相当于将a，b进行p进制分解,然后递归求解p进制下a，b每一位的组合数连乘积
+#### 特有： 当a与b按p进制展开的时候若有bi>ai,则$C_a^b\% p=0w$
 
 ```cpp
 #include <iostream>

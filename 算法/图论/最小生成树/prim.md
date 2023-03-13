@@ -1,4 +1,4 @@
-# prim
+# prim 稠密图
 [click](https://www.acwing.com/problem/content/860/)
 ![图 1](/images/018903d32a7b54782ba2048bf29bad816cf8aa10130ca65e8844ded7b4961b5f.png)  
 

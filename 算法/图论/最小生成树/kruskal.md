@@ -1,4 +1,4 @@
-# kruskal
+# kruskal   稀疏图
 [click](https://www.acwing.com/problem/content/861/)
 ![图 1](/images/df28f6156c0ef17e5738b0768621d2ae332b67af81816c9f5808f8e3eb6a16f1.png)  
 

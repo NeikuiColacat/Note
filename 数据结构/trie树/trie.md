@@ -1,4 +1,5 @@
 # trie树 方便快速查找储存字符串
+
 [原题](https://www.acwing.com/problem/content/837/)
 ![图 3](../../images/7b203929b77ed519c3e70ef145c92cc486c41778b50a6a651295e8f4260fab80.png)  
 
@@ -33,4 +34,27 @@ int query(char* s) {
 	}
 	return cnt[p];
 }
+```
+
+## 可持久化trie
+
+1. 一个root数组存各个版本根节点地址，根节点为空
+2. 每插入一个新字串作为新的版本
+3. 新版本copy上一版本的指针，同时新字串开辟新的空间,只更改变动部分
+
+```cpp
+const int N = 2e5+10 , M = N*25 ;
+int num[N] , root [N] , tr[M][2] , idx;
+//以 01 trie 为例
+ // i 为 版本号 ，k为二进制位数 ，p为上一个版本 ，q为新版本
+void insert(int i , int k , int p , int q){ 
+	//从高位到低位插入
+	if(k < 0 ) return;
+	int digi = num[i] >> k & 1;
+	if(p) tr[q][digi^1] = tr[p][digi^1]; // copy 操作
+	tr[q][v] = ++idx; // 开点
+	insert( i , k - 1 , tr[p][v] , tr[q][v]);
+
+}
+
 ```

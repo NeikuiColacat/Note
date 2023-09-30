@@ -17,7 +17,6 @@ $n$
 损失函数: $J=\frac{1}{2m}\Sigma_{i=1}^m(\hat y-y_i)^2$
 
 其中
-
 $\hat{y}=WX^T+b$
 
 $m$
@@ -32,9 +31,7 @@ $w_i=w_i-\frac{LR}{m}\Sigma\frac{\partial J}{\partial w_i}$
 $b=b-\frac{LR}{m}\Sigma\frac{\partial J}{\partial b}$
 
 其中
-
 $LR$
-
 为学习率
 
 ### 该损失函数图像呈现为凹面，具有全局最小值

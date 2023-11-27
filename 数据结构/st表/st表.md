@@ -7,7 +7,7 @@ for (int i = 1; i <= len; i++) ST[i][0] = a[i];
 for (int j = 1; j <= mlg; j++) {
     int lenj = 1 << j;
     for (int i = 1; i + lenj - 1 <= len; i++) {
-        ST[i][j] = get(ST[i][j - 1], ST[i + (lenj >> 1))][j - 1]);
+        ST[i][j] = get(ST[i][j - 1], ST[i + (lenj >> 1)][j - 1]);
     }
 }
 
